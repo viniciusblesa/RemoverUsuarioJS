@@ -2,13 +2,13 @@
 
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-function cadastrar2(){
+function cadastrar(){
     let nome = document.getElementById("nome").value;
     let idade = document.getElementById("idade").value;
 
     let novoUsuario = {nome: nome, idade: idade};
 
-    if (nome === "", idade === ""){
+    if (nome === "" || idade === ""){
         alert("Preencha todas as informações");
         return;
     }
